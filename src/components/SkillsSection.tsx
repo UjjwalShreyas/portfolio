@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "C", "Java"]
+    skills: ["Python", "C", "Java", "Full Stack", "HTML", "CSS", "JavaScript", "Next.js", "React.js", "Tailwind CSS"]
   },
   {
     title: "DBMS & Tools",
@@ -19,9 +19,9 @@ const skillCategories = [
 ];
 
 const softSkills = [
-  "Communication", "Teamwork", "Analytical Thinking", 
+  "Communication", "Teamwork", "Analytical Thinking",
   "Leadership", "Adaptability", "Time Management",
-  "Communication", "Teamwork", "Analytical Thinking", 
+  "Communication", "Teamwork", "Analytical Thinking",
   "Leadership", "Adaptability", "Time Management" // Doubled for infinite scroll
 ];
 
@@ -63,7 +63,7 @@ export default function SkillsSection() {
         <h2 className="font-heading text-4xl md:text-6xl text-white mb-16">
           Technical <span className="text-[var(--color-scarlet-red)]">Skills</span>
         </h2>
-        
+
         <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
           {skillCategories.map((cat, idx) => (
             <div key={idx} className="bg-[var(--color-dark-surface)] p-8 rounded-2xl border border-gray-800">
@@ -73,8 +73,8 @@ export default function SkillsSection() {
               </h3>
               <div className="flex flex-wrap gap-3">
                 {cat.skills.map((skill, i) => (
-                  <span 
-                    key={i} 
+                  <span
+                    key={i}
                     className="skill-pill opacity-0 px-4 py-2 bg-[var(--color-dark-bg)] border border-gray-800 text-gray-300 text-sm font-medium rounded-full cursor-default hover:border-[var(--color-scarlet-red)] hover:text-white transition-colors"
                   >
                     {skill}
