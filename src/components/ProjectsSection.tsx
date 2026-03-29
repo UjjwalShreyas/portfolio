@@ -16,18 +16,6 @@ const projects = [
     github: "https://github.com/UjjwalShreyas/FUTURE_DS_03",
   },
   {
-    title: "Machine Learning Tasks",
-    description: "Comprehensive machine learning implementations covering data clustering, classification, and regression models.",
-    tags: ["Python", "Scikit-Learn", "ML"],
-    github: "https://github.com/UjjwalShreyas/FUTURE_DS_02",
-  },
-  {
-    title: "Cyber Security Analysis",
-    description: "Cybersecurity focus tasks centered on anomaly detection, log analysis, and testing system security protocols.",
-    tags: ["Security", "Log Analysis"],
-    github: "https://github.com/UjjwalShreyas/FUTURE_DS_01",
-  },
-  {
     title: "Humanizer AI",
     description: "Artificial Intelligence project aimed at parsing, synthesizing, and generating human-like natural language.",
     tags: ["AI", "NLP", "Python"],
