@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["Python", "C", "Java", "Full Stack", "HTML", "CSS", "JavaScript", "Next.js", "React.js", "Tailwind CSS"]
+    skills: ["Python", "C", "Java", "c++"]
   },
   {
     title: "DBMS & Tools",
@@ -14,7 +14,7 @@ const skillCategories = [
   },
   {
     title: "Web Technologies",
-    skills: ["HTML", "CSS", "JavaScript", "Next.js"]
+    skills: ["HTML", "CSS", "JavaScript", "Next.js", "React", "Tailwind CSS"]
   }
 ];
 

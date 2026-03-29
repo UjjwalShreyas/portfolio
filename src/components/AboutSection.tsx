@@ -52,7 +52,7 @@ export default function AboutSection() {
               About <span className="text-[var(--color-scarlet-red)]">Me</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed tracking-wide">
-              I am a B.Tech student at Vignan Institution of Technology and Science, Hyderabad (Class of 2028). I am deeply passionate about data, development, and solving complex problems through technology. I thrive in environments where creativity meets analytical rigor.
+              I am a B.Tech student at Vignan Institution of Technology and Science, Hyderabad . I am deeply passionate about data, development, and solving complex problems through technology. I thrive in environments where creativity meets analytical rigor.
             </p>
             
             <div className="pt-4">
@@ -92,7 +92,7 @@ export default function AboutSection() {
               </li>
               <li className="flex flex-col">
                 <span className="text-gray-500 text-sm font-medium uppercase tracking-wider mb-1">Languages Spoken</span>
-                <span className="text-white font-semibold text-lg">EN, TE, HI</span>
+                <span className="text-white font-semibold text-lg">ENGLISH, TELUGU, HINDI</span>
               </li>
             </ul>
           </div>
