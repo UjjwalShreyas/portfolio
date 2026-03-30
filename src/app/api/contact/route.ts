@@ -1,4 +1,8 @@
 import { NextResponse } from "next/server";
+import { Resend } from 'resend';
+
+// Initialize Resend with the API key
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 function escapeHTML(str: string) {
   return str.replace(/[&<>'"]/g, 
@@ -55,11 +59,25 @@ export async function POST(req: Request) {
     const sanitizedEmail = escapeHTML(email.substring(0, 100));
     const sanitizedMessage = escapeHTML(message.substring(0, 2000));
 
-    // FUTURE: Send email using Resend / EmailJS
-    console.log(`SECURE CONTACT FORM SUBMISSION:
-      From: ${sanitizedName} <${sanitizedEmail}>
-      Message: ${sanitizedMessage}
-    `);
+    // Send email using Resend
+    try {
+      const { data, error } = await resend.emails.send({
+        from: 'Portfolio Contact Form <onboarding@resend.dev>', // Use verified domain if available
+        to: ['ujvivobook@gmail.com'], 
+        subject: `New Portfolio Message from ${sanitizedName}`,
+        replyTo: sanitizedEmail,
+        text: `You have a new secure message from your portfolio website.\n\nFrom: ${sanitizedName} (${sanitizedEmail})\n\nMessage:\n${sanitizedMessage}`,
+      });
+
+      if (error) {
+        console.error("Resend API Error details:", error);
+        // Do not leak Resend error details to the client
+        return NextResponse.json({ error: "Failed to deliver the message safely. Please try again later." }, { status: 500 });
+      }
+    } catch (deliveryError) {
+      console.error("Internal delivery exception:", deliveryError);
+      return NextResponse.json({ error: "Failed to deliver the message safely. Please try again later." }, { status: 500 });
+    }
 
     return NextResponse.json({ success: true, message: "Valid payload received securely." });
   } catch (error) {
