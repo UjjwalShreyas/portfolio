@@ -6,15 +6,16 @@ interface MagneticProps {
   children: ReactNode;
   className?: string;
   href?: string;
-  download?: boolean;
-  [x: string]: any;
+  download?: boolean | string;
+  [x: string]: unknown;
 }
 
 export default function MagneticButton({ children, className, ...props }: MagneticProps) {
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouse = (e: React.MouseEvent<HTMLElement>) => {
+    if (!ref.current) return;
     const { clientX, clientY } = e;
     const { height, width, left, top } = ref.current.getBoundingClientRect();
     const middleX = clientX - (left + width / 2);
@@ -26,7 +27,7 @@ export default function MagneticButton({ children, className, ...props }: Magnet
     setPosition({ x: 0, y: 0 });
   };
 
-  const Component: any = props.href ? motion.a : motion.button;
+  const Component: React.ElementType = props.href ? motion.a : motion.button;
 
   return (
     <Component

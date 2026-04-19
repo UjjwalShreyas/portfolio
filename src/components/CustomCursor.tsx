@@ -5,17 +5,18 @@ import { motion, useSpring } from "framer-motion";
 export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(true); // Default true to prevent flash
+  const [isTouchDevice] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    }
+    return true;
+  }); // Default true to prevent flash
 
   // Use springs for smooth following
   const cursorX = useSpring(-100, { stiffness: 500, damping: 28, mass: 0.5 });
   const cursorY = useSpring(-100, { stiffness: 500, damping: 28, mass: 0.5 });
 
   useEffect(() => {
-    // Check if device is touch
-    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
-      setIsTouchDevice(false);
-    }
 
     const moveCursor = (e: MouseEvent) => {
       cursorX.set(e.clientX - 8);

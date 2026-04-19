@@ -29,7 +29,8 @@ export default function TextScramble({ phrases, className }: { phrases: string[]
         let output = "";
         let complete = 0;
         for (let i = 0, n = queue.length; i < n; i++) {
-          let { from, to, start, end, char } = queue[i];
+          const { from, to, start, end } = queue[i];
+          let { char } = queue[i];
           if (frame >= end) {
             complete++;
             output += to;

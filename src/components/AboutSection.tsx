@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -36,9 +37,9 @@ export default function AboutSection() {
           <div className="w-full h-[450px] md:h-[600px] rounded-[2rem] overflow-hidden border-[1px] border-gray-800 shadow-2xl relative group">
             <div className="absolute inset-0 bg-[var(--color-scarlet-red)]/10 group-hover:bg-transparent transition-colors duration-700 z-10 pointer-events-none" />
             <img 
-              src="/myself.jpg" 
+              src="/myself.jpeg" 
               alt="G. Ujjwal Shreyas" 
-              className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
+              className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" 
             />
             <div className="absolute inset-0 border-[3px] border-transparent group-hover:border-[var(--color-scarlet-red)]/50 rounded-[2rem] transition-colors duration-700 z-20 pointer-events-none" />
           </div>

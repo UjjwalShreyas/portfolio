@@ -1,0 +1,14 @@
+
+> portfolio@0.1.0 lint
+> eslint
+
+
+C:\Users\ujjwa\OneDrive\Desktop\portfolio\src\app\api\contact\route.ts
+  72:69  error    Unexpected any. Specify a different type   @typescript-eslint/no-explicit-any
+  86:15  warning  'data' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ujjwa\OneDrive\Desktop\portfolio\src\components\CustomCursor.tsx
+  8:25  warning  'setIsTouchDevice' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+Γ£û 3 problems (1 error, 2 warnings)
+

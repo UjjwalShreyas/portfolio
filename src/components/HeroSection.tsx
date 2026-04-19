@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import TextScramble from "./TextScramble";
 import MagneticButton from "./MagneticButton";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from "react-icons/fa";
 
 export default function HeroSection() {
   const ref = useRef(null);
@@ -53,7 +53,18 @@ export default function HeroSection() {
           <MagneticButton href="#projects" className="px-8 py-4 text-lg bg-[var(--color-scarlet-red)] text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105" data-interactive="true">
             View My Work
           </MagneticButton>
-          <MagneticButton href="/resume.pdf" download className="px-8 py-4 text-lg bg-transparent border-2 border-[var(--color-dark-surface)] text-white font-bold rounded-full hover:border-[var(--color-scarlet-red)] transition-all duration-300 hover:scale-105" data-interactive="true">
+          <MagneticButton 
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/Ujjwal_Shreyas_Resume.pdf";
+              link.download = "Ujjwal_Shreyas_Resume.pdf";
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+            className="px-8 py-4 text-lg bg-transparent border-2 border-[var(--color-dark-surface)] text-white font-bold rounded-full hover:border-[var(--color-scarlet-red)] transition-all duration-300 hover:scale-105" 
+            data-interactive="true"
+          >
             Download Resume
           </MagneticButton>
         </motion.div>
@@ -73,6 +84,27 @@ export default function HeroSection() {
           <a href="mailto:ujvivobook@gmail.com" className="text-gray-400 hover:text-[var(--color-scarlet-red)] transition-colors" data-interactive="true">
             <FaEnvelope />
           </a>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.2, duration: 1 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center cursor-pointer opacity-80 hover:opacity-100 transition-opacity"
+          onClick={() => {
+            const aboutSection = document.getElementById("about");
+            aboutSection?.scrollIntoView({ behavior: "smooth" });
+          }}
+          data-interactive="true"
+        >
+          <span className="text-gray-500 text-xs tracking-[0.2em] mb-2 uppercase font-medium">Scroll</span>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+          >
+            <FaChevronDown className="text-[var(--color-scarlet-red)] text-lg" />
+          </motion.div>
         </motion.div>
       </div>
     </section>

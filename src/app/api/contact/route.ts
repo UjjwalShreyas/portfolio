@@ -69,7 +69,7 @@ export async function POST(req: Request) {
     const validationResult = contactSchema.safeParse(body);
 
     if (!validationResult.success) {
-      const errorMessages = validationResult.error.issues.map((err: any) => err.message).join(', ');
+      const errorMessages = validationResult.error.issues.map((err) => err.message).join(', ');
       console.warn(`[SECURITY] Invalid payload received from IP ${ip}: ${errorMessages}`);
       return NextResponse.json({ error: "Invalid input parameters: " + errorMessages }, { status: 400 });
     }
@@ -83,7 +83,7 @@ export async function POST(req: Request) {
 
     // Send email using Resend
     try {
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: 'Portfolio Contact Form <onboarding@resend.dev>', // Use verified domain if available
         to: ['ujvivobook@gmail.com'], 
         subject: `New Portfolio Message from ${sanitizedName}`,

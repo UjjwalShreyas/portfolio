@@ -31,9 +31,9 @@ export default function EducationTimeline() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const cards = gsap.utils.toArray(".timeline-card");
+    const cards = gsap.utils.toArray(".timeline-card") as HTMLElement[];
     
-    cards.forEach((card: any, i) => {
+    cards.forEach((card, i) => {
       const isLeft = i % 2 === 0;
       gsap.fromTo(
         card,
