@@ -47,7 +47,7 @@ export default function ContactSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <h2 className="font-heading text-5xl md:text-7xl text-white mb-6">
-            Let&apos;s Build <span className="text-[var(--color-scarlet-red)]">Something.</span>
+            Let&apos;s Build <span className="text-[var(--color-scarlet-red)]">Together.</span>
           </h2>
           <p className="text-xl text-gray-400 mb-12 max-w-md">
             Have an idea or a project in mind? Reach out and let&apos;s turn it into reality.

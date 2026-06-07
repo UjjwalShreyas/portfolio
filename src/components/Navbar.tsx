@@ -69,7 +69,7 @@ export default function Navbar() {
             className="font-heading text-2xl tracking-widest text-white hover:text-[var(--color-scarlet-red)] transition-colors duration-300 select-none"
             data-interactive="true"
           >
-            GUS<span className="text-[var(--color-scarlet-red)]">.</span>
+            USG<span className="text-[var(--color-scarlet-red)]">.</span>
           </button>
 
           {/* ── Desktop Links ── */}

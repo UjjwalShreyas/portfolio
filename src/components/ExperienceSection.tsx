@@ -23,7 +23,7 @@ const experiences = [
     company: "Tata Group",
     role: "GenAI-Powered Data Analytics Job Simulation",
     platform: "Forage",
-    date: "2025",
+    date: "Jan 2026",
     certUrl: "https://www.linkedin.com/posts/ujjwalshreyasg_tata-ugcPost-7469391419246292992-BJMK/",
     details: [
       "Explored Generative AI applications in data analytics workflows.",

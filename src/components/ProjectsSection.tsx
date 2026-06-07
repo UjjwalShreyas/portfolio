@@ -43,7 +43,7 @@ export default function ProjectsSection() {
     <section id="projects" className="py-24 bg-[var(--color-dark-bg)]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="font-heading text-4xl md:text-6xl text-white text-center mb-16">
-          Selected <span className="text-[var(--color-scarlet-red)]">Projects</span>
+          My <span className="text-[var(--color-scarlet-red)]">Projects</span>
         </h2>
 
         {/* 2-Column Responsive Grid */}

@@ -123,7 +123,7 @@ export default function CertificationsSection() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <h2 className="font-heading text-4xl md:text-6xl text-white text-center mb-4">
-          <span className="text-[var(--color-scarlet-red)]">Certifications</span> &amp; Extras
+          <span className="text-[var(--color-scarlet-red)]">Certifications </span> &amp; Extras
         </h2>
         <p className="text-gray-500 text-center mb-16 text-sm uppercase tracking-widest">
           Click any card to view the certificate

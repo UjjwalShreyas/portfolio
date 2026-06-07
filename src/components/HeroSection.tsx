@@ -33,7 +33,7 @@ export default function HeroSection() {
           transition={{ delay: 1, duration: 0.8 }}
           className="text-lg md:text-2xl text-[var(--color-muted-white)] font-medium mb-2"
         >
-          Developer · Data Analyst · Builder
+          Full Stack Developer · Data Analyst · Tech Enthusiast
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export default function HeroSection() {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="text-gray-400 mb-8 max-w-lg"
         >
-          Aspiring engineer turning ideas into real-world solutions.
+         Hi, Im an Aspiring engineer turning ideas into real-world solutions.
         </motion.p>
         
         <motion.div 
@@ -51,7 +51,7 @@ export default function HeroSection() {
           className="flex flex-col sm:flex-row gap-6 mt-12 w-full sm:w-auto relative z-10 justify-center"
         >
           <MagneticButton href="#projects" className="px-8 py-4 text-lg bg-[var(--color-scarlet-red)] text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105" data-interactive="true">
-            View My Work
+          My Work
           </MagneticButton>
           <MagneticButton 
             onClick={() => {
