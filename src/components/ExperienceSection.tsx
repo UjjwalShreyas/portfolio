@@ -18,6 +18,17 @@ const experiences = [
     date: "Feb 2026",
     certUrl: "https://www.linkedin.com/posts/ujjwalshreyasg_deloitte-certificate-activity-7421208107248349185-97ld",
     details: ["Provided cybersecurity breach support.", "Analyzed web activity logs and identified suspicious activities."]
+  },
+  {
+    company: "Tata Group",
+    role: "GenAI-Powered Data Analytics Job Simulation",
+    platform: "Forage",
+    date: "2025",
+    certUrl: "https://www.linkedin.com/posts/ujjwalshreyasg_tata-ugcPost-7469391419246292992-BJMK/",
+    details: [
+      "Explored Generative AI applications in data analytics workflows.",
+      "Applied AI-powered techniques to derive insights from large datasets."
+    ]
   }
 ];
 
@@ -28,7 +39,7 @@ export default function ExperienceSection() {
         Job <span className="text-[var(--color-scarlet-red)]">Simulations</span>
       </h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {experiences.map((exp, index) => (
           <motion.div 
             key={index}
