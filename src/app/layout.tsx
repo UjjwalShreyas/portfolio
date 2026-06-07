@@ -3,6 +3,7 @@ import { Inter, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col relative selection:bg-scarlet-red selection:text-white" suppressHydrationWarning>
         <div className="bg-noise"></div>
         <CustomCursor />
+        <Navbar />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

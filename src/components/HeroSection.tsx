@@ -16,7 +16,7 @@ export default function HeroSection() {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
-    <section ref={ref} className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id="hero" ref={ref} className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Parallax Blob */}
       <motion.div 
         style={{ y: yBg, opacity }}

@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const projects = [
   {
@@ -10,22 +10,25 @@ const projects = [
     github: "https://github.com/UjjwalShreyas/Inventory-manager",
   },
   {
-    title: "Sales Data Analysis (DS)",
-    description: "Interactive dashboard providing deep regional trend analysis and visualized insights on massive datasets.",
-    tags: ["Tableau", "Data Vis", "Analytics"],
-    github: "https://github.com/UjjwalShreyas/FUTURE_DS_03",
+    title: "The CODARA",
+    description: "Code & Git repository analyzer powered by Groq + Gemini API — delivering deep insights into codebases at lightning speed.",
+    tags: ["React", "Node.js", "Groq", "Gemini", "GitHub API"],
+    github: "https://github.com/UjjwalShreyas/CODARA",
+    liveUrl: "https://thecodara.vercel.app/",
   },
   {
     title: "Humanizer AI",
     description: "Artificial Intelligence project aimed at parsing, synthesizing, and generating human-like natural language.",
     tags: ["AI", "NLP", "Python"],
     github: "https://github.com/UjjwalShreyas/humanizer-ai",
+    liveUrl: "https://undetectify.vercel.app/",
   },
   {
     title: "Psychologist Site",
     description: "Clean, accessible web interface designed specifically for psychological consultancy scheduling and information.",
     tags: ["Web Dev", "UI/UX", "HTML/CSS"],
     github: "https://github.com/UjjwalShreyas/psychologist-site",
+    liveUrl: "https://www.sumakavitha.online/",
   },
   {
     title: "YouTube Video Downloader",
@@ -78,10 +81,22 @@ export default function ProjectsSection() {
                   <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-6">{project.description}</p>
                 </div>
 
-                <div className="mt-auto">
+                <div className="mt-auto flex items-center justify-between gap-4 flex-wrap">
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex text-[var(--color-scarlet-red)] font-medium text-sm tracking-wider uppercase items-center gap-2 group-hover:underline" data-interactive="true">
                     View on GitHub <span>→</span>
                   </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-interactive="true"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-gray-400 hover:text-white border border-gray-700 hover:border-[var(--color-scarlet-red)] px-3 py-1.5 rounded-full transition-all duration-300"
+                    >
+                      <FiExternalLink size={13} />
+                      Live Site
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

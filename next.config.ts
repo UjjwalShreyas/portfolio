@@ -14,6 +14,7 @@ const cspHeader = `
 `
 
 const nextConfig: NextConfig = {
+
   async headers() {
     return [
       {
