@@ -65,6 +65,13 @@ const certifications: Cert[] = [
     certUrl: "/certificates/orbit.pdf",
     category: "Course",
   },
+  {
+    issuer: "Anthropic",
+    name: "Claude 101",
+    logo: "AN",
+    certUrl: "/certificates/anthropic-claude.pdf",
+    category: "Course",
+  },
 
   // ── Events ────────────────────────────────────────────
   {
