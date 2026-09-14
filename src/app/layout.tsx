@@ -18,10 +18,10 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata: Metadata = {
   title: "G. Ujjwal Shreyas | Portfolio",
-  description: "Aspiring engineer turning ideas into real-world solutions. Developer, Data Analyst, and Builder based in Hyderabad.",
+  description: "Aspiring engineer turning ideas into real-world solutions. Developer, and Builder based in Hyderabad.",
   openGraph: {
     title: "G. Ujjwal Shreyas | Portfolio",
-    description: "Aspiring engineer turning ideas into real-world solutions. Developer, Data Analyst, and Builder based in Hyderabad.",
+    description: "Aspiring engineer turning ideas into real-world solutions. Developer, and Builder based in Hyderabad.",
     url: "https://ujjwalshreyas.com",
     siteName: "G. Ujjwal Shreyas Portfolio",
     locale: "en_IN",
