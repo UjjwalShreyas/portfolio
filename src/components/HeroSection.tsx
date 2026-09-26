@@ -45,31 +45,6 @@ export default function HeroSection() {
         </motion.p>
         
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4, duration: 0.8 }}
-          className="flex flex-col sm:flex-row gap-6 mt-12 w-full sm:w-auto relative z-10 justify-center"
-        >
-          <MagneticButton href="#projects" className="px-8 py-4 text-lg bg-[var(--color-scarlet-red)] text-white font-bold rounded-full hover:bg-red-700 transition-all duration-300 hover:scale-105" data-interactive="true">
-          My Work
-          </MagneticButton>
-          <MagneticButton 
-            onClick={() => {
-              const link = document.createElement("a");
-              link.href = "/Ujjwal_Shreyas_Resume.pdf";
-              link.download = "Ujjwal_Shreyas_Resume.pdf";
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
-            className="px-8 py-4 text-lg bg-transparent border-2 border-[var(--color-dark-surface)] text-white font-bold rounded-full hover:border-[var(--color-scarlet-red)] transition-all duration-300 hover:scale-105" 
-            data-interactive="true"
-          >
-            Download Resume
-          </MagneticButton>
-        </motion.div>
-
-        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8, duration: 1 }}

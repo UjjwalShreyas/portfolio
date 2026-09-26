@@ -4,10 +4,11 @@ import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const projects = [
   {
-    title: "Inventory Manager",
-    description: "Database management system designed to handle entity relations, enforce constraints, and execute complex queries natively.",
-    tags: ["SQL", "ER Diagrams", "DDL", "DML"],
-    github: "https://github.com/UjjwalShreyas/Inventory-manager",
+    title: "Aaharika",
+    description: "AI-powered smart pantry & nutrition tracking web application for Indian households.",
+    tags: ["Next.js","React","TypeScript","Tailwind CSS v4","Supabase","Google Gemini API","Google OAuth","REST APIs"],
+    liveUrl: "aaharikaotbi.vercel.app",
+
   },
   {
     title: "The CODARA",

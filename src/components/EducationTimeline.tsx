@@ -9,7 +9,7 @@ const educationData = [
     period: "2024–2028",
     degree: "B.Tech",
     institution: "Vignan Institution of Technology and Science, Hyderabad",
-    score: null
+    score: "CGPA 9.0"
   },
   {
     period: "2022–2024",
